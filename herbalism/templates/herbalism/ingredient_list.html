@@ -2,7 +2,8 @@
 
 {% block content %}
 	<div class="menu-header">
-		<div><h2><a href="">INGREDIENTS</a></h2></div>
+		<div class="menu-tab" ><h2><a href="">GENERATOR</a></h2></div>
+		<div class="menu-tab" style="background-color: #F07167"><h2><a href="{% url 'ingredient_list' %}">INGREDIENTS</a></h2></div>
 	</div>
 	<div class="ingredient-list">
 		<table>
@@ -22,6 +23,11 @@
 						<td>-{{ ingredient.difficult }}</td>
 					{% else %}
 						<td>+{{ ingredient.difficult }}</td>
+					{% endif %}
+					{% if ingredient.isMagic %}
+						<td style="color: #0081A7">Magic</td>
+					{% else %}
+						<td></td>
 					{% endif %}
 				</tr>
 			{% endfor %}
