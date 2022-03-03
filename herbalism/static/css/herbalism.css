@@ -1,0 +1,48 @@
+h1, h2, h3, h4 {
+	font-family: 'Lobster', cursive;
+}
+
+.page-header {
+	background-color: #0081A7;
+	margin: 0 0 0 0;
+	padding:  10px 10px 20px 40px;
+	border-style: none;
+}
+
+.page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
+	color: #FFFFFF;
+	font-family: 'Lobster';
+	font-size: 36pt;
+	text-decoration: none;
+}
+
+.menu-header {
+	background-color: #F07167;
+	margin: 0 0 0 0;
+	padding: 10px 10px 20px 40px;
+}
+
+.menu-header h2, .menu-header h2 a, .menu-header h2 a:visited, .menu-header h2 a:active {
+	color:  #FFFFFF;
+	font-family: 'Lobster';
+	font-size: 24pt;
+	text-decoration: none;
+}
+
+.content {
+	margin: 0 0 0 0;
+}
+
+.ingredient-list {
+	margin-left: 40px;
+}
+
+.ingredient-list td {
+	padding: 5px 5px 5px 5px;	
+	font-family: 'Lobster';
+	font-size: 16pt;
+}
+
+.card {
+	margin: 0 0 0 40px;
+}

@@ -1,0 +1,30 @@
+{% extends 'herbalism/base.html' %}
+
+{% block content %}
+	<div class="menu-header">
+		<div><h2><a href="">INGREDIENTS</a></h2></div>
+	</div>
+	<div class="ingredient-list">
+		<table>
+			{% for ingredient in ingredients %}
+				<tr>
+					<td><a href="{% url 'ingredient_detail' pk=ingredient.pk %}">{{ ingredient.name }}</a></td>
+					{% if ingredient.rarity == "1" %}
+						<td style="color: #1EFF00">Необычный</td>
+					{% elif ingredient.rarity == "2" %}
+						<td style="color: #0070DD">Редкий</td>
+					{% elif ingredient.rarity == "3" %}
+						<td style="color: #FF8000">Эпический</td>
+					{% else %}
+						<td style="color: #808080">Обычный</td>
+					{% endif %}
+					{% if ingredient.difficult < 0 %}
+						<td>-{{ ingredient.difficult }}</td>
+					{% else %}
+						<td>+{{ ingredient.difficult }}</td>
+					{% endif %}
+				</tr>
+			{% endfor %}
+		</table>
+	</div>
+{% endblock %}

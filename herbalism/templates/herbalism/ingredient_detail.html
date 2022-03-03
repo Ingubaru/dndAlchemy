@@ -1,0 +1,16 @@
+{% extends 'herbalism/base.html' %}
+
+{% block content %}
+	<div class="menu-header">
+		<div><h2><a href="{% url 'ingredient_list' %}">INGREDIENTS</a></h2></div>
+	</div>
+	<div class="card">
+		<h3><a href="{% url 'ingredient_detail' pk=ingredient.pk %}">{{ ingredient.name }}</a></h3>
+		<p>{{ ingredient.rarity }}</p>
+		<p>{{ ingredient.region }}</p>
+		<p>{{ ingredient.isMagic }}</p>
+		<p>{{ ingredient.difficult }}</p>
+		<p>{{ ingredient.effect|linebreaks }}</p>
+		<p>{{ ingredient.description|linebreaks }}</p>
+	</div>
+{% endblock %}
