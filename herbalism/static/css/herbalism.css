@@ -26,7 +26,7 @@ h1, h2, h3, h4 {
 .menu-header h2, .menu-header h2 a, .menu-header h2 a:visited, .menu-header h2 a:active {
 	color:  #FFFFFF;
 	font-family: 'Lobster';
-	font-size: 3.5vw;
+	font-size: 4vw;
 	text-decoration: none;
 }
 
@@ -55,18 +55,21 @@ h1, h2, h3, h4 {
 	margin: 0 0 0 40px;
 }
 
-.generator_menu {
+.generator-menu {
 	padding: 10px 10px 2px 10px;	
 	font-family: 'Lobster';
 	font-size: 16pt;
+	display: flex;
+	flex-wrap: wrap;
 }
 
 .generator-menu-item {
-	background-color: #00AFB9; 
+	background-color: #80AFB9; 
 	font-family: 'Lobster';
-	font-size: 2.5vw;
+	font-size: 3vw;
 	text-align:  center;
 	color: white;
-	margin:  10px;
 	padding: 1% 10% 1% 10%;
+	width: 50%;
+	border: 5px solid white;
 }
