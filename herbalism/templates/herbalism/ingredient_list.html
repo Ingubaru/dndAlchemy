@@ -9,25 +9,14 @@
 		<table>
 			{% for ingredient in ingredients %}
 				<tr>
-					<td><a href="{% url 'ingredient_detail' pk=ingredient.pk %}">{{ ingredient.name }}</a></td>
 					{% if ingredient.rarity == "1" %}
-						<td style="color: #1EFF00">Необычный</td>
+						<td><a style="color: #1EFF00" href="{% url 'ingredient_detail' pk=ingredient.pk %}">{{ ingredient.name }}</a></td>
 					{% elif ingredient.rarity == "2" %}
-						<td style="color: #0070DD">Редкий</td>
+						<td><a style="color: #0070DD" href="{% url 'ingredient_detail' pk=ingredient.pk %}">{{ ingredient.name }}</a></td>
 					{% elif ingredient.rarity == "3" %}
-						<td style="color: #FF8000">Эпический</td>
+						<td><a style="color: #FF8000" href="{% url 'ingredient_detail' pk=ingredient.pk %}">{{ ingredient.name }}</a></td>
 					{% else %}
-						<td style="color: #808080">Обычный</td>
-					{% endif %}
-					{% if ingredient.difficult < 0 %}
-						<td>-{{ ingredient.difficult }}</td>
-					{% else %}
-						<td>+{{ ingredient.difficult }}</td>
-					{% endif %}
-					{% if ingredient.isMagic %}
-						<td style="color: #0081A7">Magic</td>
-					{% else %}
-						<td></td>
+						<td><a style="color: #808080" href="{% url 'ingredient_detail' pk=ingredient.pk %}">{{ ingredient.name }}</a></td>
 					{% endif %}
 				</tr>
 			{% endfor %}
