@@ -26,7 +26,7 @@ h1, h2, h3, h4 {
 .menu-header h2, .menu-header h2 a, .menu-header h2 a:visited, .menu-header h2 a:active {
 	color:  #FFFFFF;
 	font-family: 'Lobster';
-	font-size: 1.5em;
+	font-size: 150%;
 	text-decoration: none;
 }
 
