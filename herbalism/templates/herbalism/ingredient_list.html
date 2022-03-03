@@ -6,20 +6,16 @@
 		<div class="menu-tab" style="background-color: #F07167"><h2><a href="{% url 'ingredient_list' %}">INGREDIENTS</a></h2></div>
 	</div>
 	<div class="ingredient-list">
-		<table>
-			{% for ingredient in ingredients %}
-				<tr>
-					{% if ingredient.rarity == "1" %}
-						<td><a style="color: #1EFF00" href="{% url 'ingredient_detail' pk=ingredient.pk %}">{{ ingredient.name }}</a></td>
-					{% elif ingredient.rarity == "2" %}
-						<td><a style="color: #0070DD" href="{% url 'ingredient_detail' pk=ingredient.pk %}">{{ ingredient.name }}</a></td>
-					{% elif ingredient.rarity == "3" %}
-						<td><a style="color: #FF8000" href="{% url 'ingredient_detail' pk=ingredient.pk %}">{{ ingredient.name }}</a></td>
-					{% else %}
-						<td><a style="color: #808080" href="{% url 'ingredient_detail' pk=ingredient.pk %}">{{ ingredient.name }}</a></td>
-					{% endif %}
-				</tr>
-			{% endfor %}
-		</table>
+		{% for ingredient in ingredients %}
+				{% if ingredient.rarity == "1" %}
+					<div class="ingredient-item"><a href="{% url 'ingredient_detail' pk=ingredient.pk %}">{{ ingredient.name }}</a><div class="ingredient-rarity" style="background-color: #8AFF80">{{ ingredient.difficult }}</div></div>
+				{% elif ingredient.rarity == "2" %}
+					<div class="ingredient-item"><a href="{% url 'ingredient_detail' pk=ingredient.pk %}">{{ ingredient.name }}</a><div class="ingredient-rarity" style="background-color: #80B5FF">{{ ingredient.difficult }}</div></div>
+				{% elif ingredient.rarity == "3" %}
+					<div class="ingredient-item"><a href="{% url 'ingredient_detail' pk=ingredient.pk %}">{{ ingredient.name }}</a><div class="ingredient-rarity" style="background-color: #FF8080">{{ ingredient.difficult }}</div></div>
+				{% else %}
+					<div class="ingredient-item"><a href="{% url 'ingredient_detail' pk=ingredient.pk %}">{{ ingredient.name }}</a><div class="ingredient-rarity" style="background-color: #808080">{{ ingredient.difficult }}</div></div>
+				{% endif %}
+		{% endfor %}
 	</div>
 {% endblock %}
