@@ -1,0 +1,23 @@
+{% extends 'herbalism/base.html' %}
+
+{% block content %}
+	<div class="menu-header">
+		<div class="menu-tab" style="background-color: #F07167"><h2><a href="{% url 'generator_menu' %}">GENERATOR</a></h2></div>
+		<div class="menu-tab"><h2><a href="{% url 'ingredient_list' %}">INGREDIENTS</a></h2></div>
+	</div>
+	<div class="generator-menu">
+		<div class="generator-menu-item">Повсеместные</div>
+		<div class="generator-menu-item">Арктика</div>
+		<div class="generator-menu-item">Берега</div>
+		<div class="generator-menu-item">Подводная среда</div>
+		<div class="generator-menu-item">Пустыня</div>
+		<div class="generator-menu-item">Лес</div>
+		<div class="generator-menu-item">Лес (Ночь)</div>
+		<div class="generator-menu-item">Луг</div>
+		<div class="generator-menu-item">Холмы</div>
+		<div class="generator-menu-item">Горы</div>
+		<div class="generator-menu-item">Болото</div>
+		<div class="generator-menu-item">Болото (Дождь)</div>
+		<div class="generator-menu-item">Подземье</div>
+	</div>
+{% endblock %}
