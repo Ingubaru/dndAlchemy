@@ -1,3 +1,6 @@
+/*------------------------------------------------------
+	COMMON 												
+------------------------------------------------------*/
 h1, h2, h3, h4 {
 	font-family: 'Lobster';
 }
@@ -41,9 +44,14 @@ h1, h2, h3, h4 {
 	margin: 0 0 0 0;
 }
 
+
+/*------------------------------------------------------
+	INGREDIENT LIST
+------------------------------------------------------*/
 .ingredient-list {
 	display: flex;
 	flex-wrap: wrap;
+	margin: 5px;
 }
 
 .ingredient-item {
@@ -52,10 +60,11 @@ h1, h2, h3, h4 {
 	font-size: 3.5vw;
 	text-align:  left;
 	color: white;
-	padding: 1% 1% 1% 1%;
+	padding: 5px 10px 5px 10px;
 	width: 50%;
 	border: 5px solid white;
-	display: flex; flex-wrap: nowrap;
+	display: flex; 
+	flex-wrap: nowrap;
 }
 
 .ingredient-list a {
@@ -70,14 +79,51 @@ h1, h2, h3, h4 {
 	border-radius: 2.5vw;
 }
 
+
+/*------------------------------------------------------
+	INGREDIENT DETAILED
+------------------------------------------------------*/
 .card {
-	margin: 0 0 0 40px;
+	margin: 10px;
 }
 
+.card a {
+	color: white;
+}
+
+.card-header {
+	display: flex;
+	flex-wrap: nowrap;
+	color: white;
+	font-family: 'Lobster';
+	font-size: 3.5vw;
+	padding: 5px 5px 5px 10px;
+	background-color: #80AFB9;
+}
+
+.card-header #magic {
+	margin-left: auto;	
+	text-align: left;
+}
+
+.card #description {
+	background-color: #FDFCDC;	
+	padding: 5px 5px 5px 10px;
+	font-family: 'Lobster';
+	font-size: 20px;
+}
+
+.card hr {
+	border-color: #E0E0E0;
+}
+
+/*------------------------------------------------------
+	GENERATOR
+------------------------------------------------------*/
 .generator-menu {
 	display: flex;
 	flex-wrap: wrap;
-	border: 5px solid white;
+	margin: 5px;
 }
 
 .generator-menu-item {
@@ -86,7 +132,7 @@ h1, h2, h3, h4 {
 	font-size: 3.5vw;
 	text-align:  center;
 	color: white;
-	padding: 1% 10% 1% 10%;
+	padding: 5px 5px 5px 5px;
 	width: 50%;
 	border: 5px solid white;
 }

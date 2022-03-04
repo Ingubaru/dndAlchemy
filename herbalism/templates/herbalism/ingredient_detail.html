@@ -6,12 +6,33 @@
 		<div class="menu-tab" style="background-color: #F07167"><h2><a href="{% url 'ingredient_list' %}">INGREDIENTS</a></h2></div>
 	</div>
 	<div class="card">
-		<h3><a href="{% url 'ingredient_detail' pk=ingredient.pk %}">{{ ingredient.name }}</a></h3>
-		<p>{{ ingredient.rarity }}</p>
-		<p>{{ ingredient.region }}</p>
-		<p>{{ ingredient.isMagic }}</p>
-		<p>{{ ingredient.difficult }}</p>
-		<p>{{ ingredient.effect|linebreaks }}</p>
-		<p>{{ ingredient.description|linebreaks }}</p>
+		<div class="card-header">
+			<!-- Name of ingredient -->	
+			<div><a href="{% url 'ingredient_detail' pk=ingredient.pk %}">{{ ingredient.name }}</a></div>	
+
+			<!-- Name of ingredient -->	
+			{% if ingredient.isMagic %}
+				<div id="magic">MAGIC</div>
+			{% else %}
+				<div id="magic"></div>
+			{% endif %}
+
+			{% if ingredient.rarity == "1" %}	
+				<div class="ingredient-rarity" style="background-color: #8AFF80">{{ ingredient.difficult }} </div>
+			{% elif ingredient.rarity == "2" %}	
+				<div class="ingredient-rarity" style="background-color: #80B5FF">{{ ingredient.difficult }} </div>
+			{% elif ingredient.rarity == "2" %}	
+				<div class="ingredient-rarity" style="background-color: #FF8080">{{ ingredient.difficult }} </div>
+			{% else %}	
+				<div class="ingredient-rarity" style="background-color: #808080">{{ ingredient.difficult }} </div>
+			{% endif %}
+		</div>
+		<div id="description">
+			<div><b>Регионы</b> {{ ingredient.region|linebreaks }}</div>
+			<hr>
+			<div><b>Эффект</b> {{ ingredient.effect|linebreaks }}</div>
+			<hr>
+			<div><b>Описание</b> {{ ingredient.description|linebreaks }}</div>
+		</div>
 	</div>
 {% endblock %}
