@@ -8,7 +8,7 @@
 	<div class="card">
 		<div class="card-header">
 			<!-- Name of ingredient -->	
-			<div><a href="{% url 'ingredient_detail' pk=ingredient.pk %}">{{ ingredient.name }}</a></div>	
+			<div><a href="{% url 'ingredient_list' %}">{{ ingredient.name }}</a></div>	
 
 			<!-- Name of ingredient -->	
 			{% if ingredient.isMagic %}
@@ -21,7 +21,7 @@
 				<div class="ingredient-rarity" style="background-color: #8AFF80">{{ ingredient.difficult }} </div>
 			{% elif ingredient.rarity == "2" %}	
 				<div class="ingredient-rarity" style="background-color: #80B5FF">{{ ingredient.difficult }} </div>
-			{% elif ingredient.rarity == "2" %}	
+			{% elif ingredient.rarity == "3" %}	
 				<div class="ingredient-rarity" style="background-color: #FF8080">{{ ingredient.difficult }} </div>
 			{% else %}	
 				<div class="ingredient-rarity" style="background-color: #808080">{{ ingredient.difficult }} </div>

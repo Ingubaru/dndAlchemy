@@ -3,7 +3,7 @@ from .models import Ingredient
 
 
 def ingredient_list(request):
-	ingredients = Ingredient.objects.all().order_by('rarity')
+	ingredients = Ingredient.objects.all().order_by('name')
 	return render(request, 'herbalism/ingredient_list.html', {'ingredients': ingredients})
 
 
