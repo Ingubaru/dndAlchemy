@@ -61,7 +61,7 @@ arcticIngredients = {
 	2:  "Серебряный Гибискус;",
 	3:  "Порошок морплоти;",
 	4:  "Сердце жлезодрева;",
-	5:  "Замороженные сажженцы;Замороженные сажженцы;",
+	5:  "Замороженные саженцы;Замороженные саженцы;",
 	6:  getOneIngredientFromEverywhere(),
 	7:  getOneIngredientFromEverywhere(),
 	8:  getOneIngredientFromEverywhere(),
@@ -171,7 +171,7 @@ hillIngredients = {
 
 mountainIngredients = {
 	2:  "Дыхание Василиска;",
-	3:  "Замороженные сажженцы;Замороженные сажженцы;",
+	3:  "Замороженные саженцы;Замороженные саженцы;",
 	4:  "Арктический плющ;",
 	5:  "Сушёеная Эфедра;",
 	6:  getOneIngredientFromEverywhere(),

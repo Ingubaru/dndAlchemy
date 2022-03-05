@@ -7,15 +7,15 @@
 	</div>
 	<div class="ingredient-list">
 		{% for ingredient in ingredients %}
-				{% if ingredient.rarity == "1" %}
-					<div class="ingredient-item"><a href="{% url 'ingredient_detail' pk=ingredient.pk %}">{{ ingredient.name }}</a><div class="ingredient-rarity" style="background-color: #8AFF80">{{ ingredient.difficult }}</div></div>
-				{% elif ingredient.rarity == "2" %}
-					<div class="ingredient-item"><a href="{% url 'ingredient_detail' pk=ingredient.pk %}">{{ ingredient.name }}</a><div class="ingredient-rarity" style="background-color: #80B5FF">{{ ingredient.difficult }}</div></div>
-				{% elif ingredient.rarity == "3" %}
-					<div class="ingredient-item"><a href="{% url 'ingredient_detail' pk=ingredient.pk %}">{{ ingredient.name }}</a><div class="ingredient-rarity" style="background-color: #FF8080">{{ ingredient.difficult }}</div></div>
-				{% else %}
-					<div class="ingredient-item"><a href="{% url 'ingredient_detail' pk=ingredient.pk %}">{{ ingredient.name }}</a><div class="ingredient-rarity" style="background-color: #808080">{{ ingredient.difficult }}</div></div>
-				{% endif %}
+			{% if ingredient.rarity == "1" %}
+				<div class="ingredient-item"><a href="{% url 'ingredient_detail' pk=ingredient.pk %}">{{ ingredient.name }}</a><div class="ingredient-rarity" style="background-color: #8AFF80">{{ ingredient.difficult }}</div></div>
+			{% elif ingredient.rarity == "2" %}
+				<div class="ingredient-item"><a href="{% url 'ingredient_detail' pk=ingredient.pk %}">{{ ingredient.name }}</a><div class="ingredient-rarity" style="background-color: #80B5FF">{{ ingredient.difficult }}</div></div>
+			{% elif ingredient.rarity == "3" %}
+				<div class="ingredient-item"><a href="{% url 'ingredient_detail' pk=ingredient.pk %}">{{ ingredient.name }}</a><div class="ingredient-rarity" style="background-color: #FF8080">{{ ingredient.difficult }}</div></div>
+			{% else %}
+				<div class="ingredient-item"><a href="{% url 'ingredient_detail' pk=ingredient.pk %}">{{ ingredient.name }}</a><div class="ingredient-rarity" style="background-color: #808080">{{ ingredient.difficult }}</div></div>
+			{% endif %}
 		{% endfor %}
 	</div>
 {% endblock %}
