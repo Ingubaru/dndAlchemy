@@ -117,13 +117,19 @@ h1, h2, h3, h4 {
 	border-color: #E0E0E0;
 }
 
+
 /*------------------------------------------------------
 	GENERATOR
 ------------------------------------------------------*/
+
 .generator-menu {
 	display: flex;
 	flex-wrap: wrap;
 	margin: 5px;
+}
+
+.generator-menu a {
+	color: white;
 }
 
 .generator-menu-item {
@@ -131,8 +137,8 @@ h1, h2, h3, h4 {
 	font-family: 'Lobster';
 	font-size: 3.5vw;
 	text-align:  center;
-	color: white;
 	padding: 5px 5px 5px 5px;
 	width: 50%;
 	border: 5px solid white;
 }
+
