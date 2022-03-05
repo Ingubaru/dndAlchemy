@@ -20,7 +20,7 @@ def generator_menu(request):
 
 
 def generator_result(request, region):
-	ingredientsList = getIngredients(region)
+	ingredientsList = getIngredients(int(region))
 	if   len(ingredientsList) == 1: ingredients = Ingredient.objects.filter(name__contains=ingredientsList[0])
 	if   len(ingredientsList) == 1: ingredients = Ingredient.objects.filter(name__contains=ingredientsList[0])
 	elif len(ingredientsList) == 2: ingredients = Ingredient.objects.filter(name__contains=ingredientsList[0]) | Ingredient.objects.filter(name__contains=ingredientsList[1])
