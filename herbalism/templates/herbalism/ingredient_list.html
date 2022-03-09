@@ -6,7 +6,7 @@
 		<div class="menu-tab" style="background-color: #F07167"><h2><a href="{% url 'ingredient_list' %}">INGREDIENTS</a></h2></div>
 	</div>
 	{% for ingredient in ingredients %}
-		<div class="card">
+		<div class="ingredient-item">
 			<div class="card-header">
 				<!-- Name of ingredient -->	
 				<div class="ingredient-name"><a href="{% url 'ingredient_detail' pk=ingredient.pk %}">{{ ingredient.name }}</a></div>	
