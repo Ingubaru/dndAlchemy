@@ -8,7 +8,7 @@
 	<div class="card">
 		<div class="card-header">
 			<!-- Name of ingredient -->	
-			<div><a href="{% url 'ingredient_list' %}">{{ ingredient.name }}</a></div>	
+			<div class="ingredient-name"><a href="{% url 'ingredient_list' %}">{{ ingredient.name }}</a></div>	
 
 			<!-- Name of ingredient -->	
 			{% if ingredient.isMagic %}
@@ -32,7 +32,7 @@
 			<hr>
 			<div><b>Эффект</b> {{ ingredient.effect|linebreaks }}</div>
 			<hr>
-			<div><b>Описание</b> {{ ingredient.description|linebreaks }}</div>
+			<div><b>Описание</b> {{ ingredient.description|linebreaks|urlize }}</div>
 		</div>
 	</div>
 {% endblock %}

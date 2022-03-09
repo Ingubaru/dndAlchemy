@@ -48,29 +48,6 @@ h1, h2, h3, h4 {
 /*------------------------------------------------------
 	INGREDIENT LIST
 ------------------------------------------------------*/
-.ingredient-list {
-	display: flex;
-	flex-wrap: wrap;
-	margin: 5px;
-}
-
-.ingredient-item {
-	background-color: #80AFB9; 
-	font-family: 'Lobster';
-	font-size: 3.5vw;
-	text-align:  left;
-	color: white;
-	padding: 5px 10px 5px 10px;
-	width: 50%;
-	border: 5px solid white;
-	display: flex; 
-	flex-wrap: nowrap;
-}
-
-.ingredient-list a {
-	color: white;
-}
-
 .ingredient-rarity {
 	text-align: center;
 	width: 5vw;	
@@ -88,7 +65,7 @@ h1, h2, h3, h4 {
 	border: 10px solid white;
 }
 
-.card a {
+.ingredient-name a{
 	color: white;
 }
 
