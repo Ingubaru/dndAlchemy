@@ -32,9 +32,9 @@
 			<div id="description">
 				<div><b>Регионы</b> {{ ingredient.region|linebreaks }}</div>
 				<hr>
-				<div><b>Эффект</b> {{ ingredient.effect|linebreaks }}</div>
+				<div><b>Эффект</b> {{ ingredient.effect|linebreaks|urlize }}</div>
 				<hr>
-				<div><b>Описание</b> {{ ingredient.description|linebreaks|urlize }}</div>
+				<div><b>Описание</b> {{ ingredient.description|linebreaks }}</div>
 			</div>
 		</div>
 	</div>
