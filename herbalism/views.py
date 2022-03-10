@@ -1,6 +1,6 @@
 from django.shortcuts import render, get_object_or_404
 from django.db.models import Q
-from .models import Ingredient
+from .models import Ingredient, Potion
 from .generator import getIngredients
 
 
@@ -25,3 +25,14 @@ def generator_result(request, region):
 	for i in ingredientsList:
 		ingredients.append(Ingredient.objects.filter(name__contains=i))
 	return render(request, 'herbalism/generator_result.html', {'ingredients': ingredients})
+
+
+def potion_list(request):
+	potions = Potion.objects.all().order_by('name')
+	print(potions)
+	return render(request, 'herbalism/potion_list.html', {'potions': potions})
+
+
+def potion_detail(request, pk):
+	potion = get_object_or_404(Potion, pk=pk)
+	return render(request, 'herbalism/potion_detail.html', {'potion': potion})

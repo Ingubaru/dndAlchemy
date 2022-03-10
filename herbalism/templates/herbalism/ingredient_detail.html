@@ -4,12 +4,13 @@
 	<div class="menu-header">
 		<div class="menu-tab" ><h2><a href="{% url 'generator_menu' %}">GENERATOR</a></h2></div>
 		<div class="menu-tab" style="background-color: #F07167"><h2><a href="{% url 'ingredient_list' %}">INGREDIENTS</a></h2></div>
+		<div class="menu-tab" ><h2><a href="{% url 'potion_list' %}">POTIONS</a></h2></div>
 	</div>
-	<div class="ingredient-list">
+	<div class="content">
 		<div class="card">
 			<div class="card-header">
 				<!-- Name of ingredient -->	
-				<div class="ingredient-name"><a href="{% url 'ingredient_list' %}">{{ ingredient.name }}</a></div>	
+				<div id="name"><a href="{% url 'ingredient_list' %}">{{ ingredient.name }}</a></div>	
 	
 				<!-- Name of ingredient -->	
 				{% if ingredient.isMagic %}
@@ -19,13 +20,13 @@
 				{% endif %}
 	
 				{% if ingredient.rarity == "1" %}	
-					<div class="ingredient-rarity" style="background-color: #8AFF80">{{ ingredient.difficult }} </div>
+					<div id="rarity" style="background-color: #7CE573">{{ ingredient.difficult }} </div>
 				{% elif ingredient.rarity == "2" %}	
-					<div class="ingredient-rarity" style="background-color: #80B5FF">{{ ingredient.difficult }} </div>
+					<div id="rarity" style="background-color: #80B5FF">{{ ingredient.difficult }} </div>
 				{% elif ingredient.rarity == "3" %}	
-					<div class="ingredient-rarity" style="background-color: #FF8080">{{ ingredient.difficult }} </div>
+					<div id="rarity" style="background-color: #FF8080">{{ ingredient.difficult }} </div>
 				{% else %}	
-					<div class="ingredient-rarity" style="background-color: #808080">{{ ingredient.difficult }} </div>
+					<div id="rarity" style="background-color: #808080">{{ ingredient.difficult }} </div>
 				{% endif %}
 			</div>
 			<div id="description">

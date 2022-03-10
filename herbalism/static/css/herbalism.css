@@ -1,6 +1,3 @@
-/*------------------------------------------------------
-	COMMON 												
-------------------------------------------------------*/
 h1, h2, h3, h4 {
 	font-family: 'Lobster';
 }
@@ -23,7 +20,7 @@ h1, h2, h3, h4 {
 .menu-header {
 	background-color: #FED9B7;
 	display: flex;
-	flex-wrap: nowrap;
+	flex-wrap: wrap;
 }
 
 .menu-header h2, .menu-header h2 a, .menu-header h2 a:visited, .menu-header h2 a:active {
@@ -34,25 +31,17 @@ h1, h2, h3, h4 {
 }
 
 .menu-tab {
-	margin: 10px;
+	border: 10px solid #FED9B7;
 	padding: 0px 5px 5px 5px;
 	width: 50%;
 	text-align: center;
 }
 
 .content {
-	margin: 0 0 0 0;
+	margin: 10px 10px 10px 10px;	
 }
 
-
-/*------------------------------------------------------
-	INGREDIENT LIST
-------------------------------------------------------*/
-.ingredient-list {
-	margin: 10px 10px 0px 10px;	
-}
-
-.ingredient-rarity {
+#rarity {
 	text-align: center;
 	width: 5vw;	
 	height: 5vw;
@@ -65,16 +54,12 @@ h1, h2, h3, h4 {
 	margin-bottom: 10px;
 }
 
-
-/*------------------------------------------------------
-	INGREDIENT DETAILED
-------------------------------------------------------*/
 .card {
 	margin-bottom: 10px;
 	width: 100%;
 }
 
-.ingredient-name a{
+#name a{
 	color: white;
 }
 
@@ -103,11 +88,6 @@ h1, h2, h3, h4 {
 .card hr {
 	border-color: #E0E0E0;
 }
-
-
-/*------------------------------------------------------
-	GENERATOR
-------------------------------------------------------*/
 
 .generator-menu {
 	display: flex;
