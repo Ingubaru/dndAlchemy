@@ -48,6 +48,10 @@ h1, h2, h3, h4 {
 /*------------------------------------------------------
 	INGREDIENT LIST
 ------------------------------------------------------*/
+.ingredient-list {
+	margin: 10px 10px 0px 10px;	
+}
+
 .ingredient-rarity {
 	text-align: center;
 	width: 5vw;	
@@ -58,9 +62,7 @@ h1, h2, h3, h4 {
 
 .ingredient-item {
 	width: 100%;
-	border-width: 10px 10px 0px 10px;
-	border-style: solid;
-	border-color: white;
+	margin-bottom: 10px;
 }
 
 
