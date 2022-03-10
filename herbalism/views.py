@@ -27,7 +27,7 @@ def generator_result(request, region):
 
 
 def potion_list(request):
-	potions = Potion.objects.all().order_by('name')
+	potions = Potion.objects.all().order_by('price')
 	return render(request, 'herbalism/potion_list.html', {'potions': potions})
 
 
