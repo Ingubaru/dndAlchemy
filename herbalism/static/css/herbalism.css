@@ -49,7 +49,7 @@ h1, h2, h3, h4 {
 	INGREDIENT LIST
 ------------------------------------------------------*/
 .ingredient-list {
-	margin: 10px 10px 10px 10px;	
+	margin: 10px 10px 0px 10px;	
 }
 
 .ingredient-rarity {
@@ -70,8 +70,8 @@ h1, h2, h3, h4 {
 	INGREDIENT DETAILED
 ------------------------------------------------------*/
 .card {
+	margin-bottom: 10px;
 	width: 100%;
-	border: 10px solid white;
 }
 
 .ingredient-name a{
@@ -97,7 +97,7 @@ h1, h2, h3, h4 {
 	background-color: #FDFCDC;	
 	padding: 5px 5px 5px 10px;
 	font-family: 'Lobster';
-	font-size: 20px;
+	font-size: 1.5vw
 }
 
 .card hr {
