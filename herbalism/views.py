@@ -6,7 +6,6 @@ from .generator import getIngredients
 
 def ingredient_list(request):
 	ingredients = Ingredient.objects.all().order_by('name')
-	print(ingredients)
 	return render(request, 'herbalism/ingredient_list.html', {'ingredients': ingredients})
 
 
@@ -29,7 +28,6 @@ def generator_result(request, region):
 
 def potion_list(request):
 	potions = Potion.objects.all().order_by('name')
-	print(potions)
 	return render(request, 'herbalism/potion_list.html', {'potions': potions})
 
 

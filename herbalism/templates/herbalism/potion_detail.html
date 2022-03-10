@@ -7,12 +7,11 @@
 		<div class="menu-tab" style="background-color: #F07167"><h2><a href="{% url 'potion_list' %}">POTIONS</a></h2></div>
 	</div>
 	<div class="content">
-	{% for potion in potions %}
 		<div class="card">
 			<div class="card-header">
 				<!-- Name of potion -->	
-				<div id="name"><a href="{% url 'potion_detail' pk=potion.pk %}">{{ potion.name }}</a></div>	
-
+				<div id="name"><a href="{% url 'potion_list' %}">{{ potion.name }}</a></div>	
+	
 				{% if potion.price == "1" %}	
 					<div id="price" style="background-color: #7CE573">{{ potion.price }} </div>
 				{% elif potion.price == "2" %}	
@@ -23,7 +22,11 @@
 					<div id="price" style="background-color: #808080">{{ potion.price }} </div>
 				{% endif %}
 			</div>
+			<div id="description">
+				<div><b>Эффект</b> {{ potion.effect|linebreaks }}</div>
+				<hr>
+				<div><b>Описание</b> {{ potion.description|linebreaks|urlize }}</div>
+			</div>
 		</div>
-	{% endfor %}
 	</div>
 {% endblock %}

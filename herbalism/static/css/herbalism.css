@@ -49,6 +49,14 @@ h1, h2, h3, h4 {
 	border-radius: 2.5vw;
 }
 
+#price {
+	text-align: center;
+	width: 15vw;	
+	height: 5vw;
+	margin-left: auto;
+	border-radius: 2.5vw;
+}
+
 .ingredient-item {
 	width: 100%;
 	margin-bottom: 10px;

@@ -18,6 +18,7 @@ class Ingredient(models.Model):
 class Potion(models.Model):
 
 	name = models.CharField(max_length=50)
+	price = models.IntegerField(default=0)
 	rarity = models.IntegerField(default=0)
 	effect = models.TextField(default='')
 	description = models.TextField(default='')
