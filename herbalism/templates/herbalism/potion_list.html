@@ -13,11 +13,11 @@
 				<!-- Name of potion -->	
 				<div id="name"><a href="{% url 'potion_detail' pk=potion.pk %}">{{ potion.name }}</a></div>	
 
-				{% if potion.rarity == "1" %}	
+				{% if potion.rarity == 1 %}	
 					<div id="price" style="background-color: #7CE573">{{ potion.price }} </div>
-				{% elif potion.rarity == "2" %}	
+				{% elif potion.rarity == 2 %}	
 					<div id="price" style="background-color: #80B5FF">{{ potion.price }} </div>
-				{% elif potion.rarity == "3" %}	
+				{% elif potion.rarity == 3 %}	
 					<div id="price" style="background-color: #FF8080">{{ potion.price }} </div>
 				{% else %}	
 					<div id="price" style="background-color: #808080">{{ potion.price }} </div>
