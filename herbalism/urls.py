@@ -9,4 +9,5 @@ urlpatterns = [
 	re_path(r'^ingredient/(?P<pk>[0-9]+)/$', views.ingredient_detail, name="ingredient_detail"),
 	path('potion_list', views.potion_list, name='potion_list'),
 	re_path(r'^potion/(?P<pk>[0-9]+)/$', views.potion_detail, name="potion_detail"),
+	re_path(r'^seller/(?P<ingr_type>[0-9]+)/$', views.seller, name='seller'),
 ]

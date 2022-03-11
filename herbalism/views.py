@@ -1,5 +1,5 @@
+from random import randint
 from django.shortcuts import render, get_object_or_404
-from django.db.models import Q
 from .models import Ingredient, Potion
 from .generator import getIngredients
 
@@ -34,3 +34,21 @@ def potion_list(request):
 def potion_detail(request, pk):
 	potion = get_object_or_404(Potion, pk=pk)
 	return render(request, 'herbalism/potion_detail.html', {'potion': potion})
+
+
+def seller(request, ingr_type):
+	if   ingr_type == '0': base_price = 8
+	elif ingr_type == '1': base_price = 20
+	elif ingr_type == '2': base_price = 100 
+	else 		       : base_price = 0
+	if   ingr_type == '0': modifier = 10
+	elif ingr_type == '1': modifier = 0
+	elif ingr_type == '2': modifier = -10 
+	else 		       : modifier = 0
+	factor_scale = randint(1, 100) + modifier
+	if   factor_scale < 21: factor = 0.1
+	elif factor_scale < 41: factor = 0.2
+	elif factor_scale < 81: factor = 0.5
+	elif factor_scale > 80: factor = 1.0
+	price = base_price * factor
+	return render(request, 'herbalism/seller.html', {'price': price})
