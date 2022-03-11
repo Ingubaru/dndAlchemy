@@ -5,7 +5,7 @@
 		<div class="menu-tab" ><h2><a href="{% url 'generator_menu' %}">GENERATOR</a></h2></div>
 		<div class="menu-tab" ><h2><a href="{% url 'ingredient_list' %}">INGREDIENTS</a></h2></div>
 		<div class="menu-tab" style="background-color: #F07167"><h2><a href="{% url 'potion_list' %}">POTIONS</a></h2></div>
-		<div class="menu-tab" ><h2><a href="{% url 'seller' type=9 %}">SELLER</a></h2></div>
+		<div class="menu-tab" ><h2><a href="{% url 'seller' ingr_type=9 %}">seller</a></h2></div>
 	</div>
 	<div class="content">
 	{% for potion in potions %}
