@@ -39,7 +39,7 @@ def potion_detail(request, pk):
 def seller(request, ingr_type):
 	if   ingr_type == '0': base_price = 8
 	elif ingr_type == '1': base_price = 20
-	elif ingr_type == '2': base_price = 100 
+	elif ingr_type == '2': base_price = 50 
 	else 		       : base_price = 0
 	if   ingr_type == '0': modifier = 10
 	elif ingr_type == '1': modifier = 0
