@@ -20,11 +20,11 @@
 					<div id="magic"></div>
 				{% endif %}
 
-				{% if ingredient.rarity == "1" %}	
+				{% if ingredient.rarity == 1 %}	
 					<div id="rarity" style="background-color: #7CE573">{{ ingredient.difficult }} </div>
-				{% elif ingredient.rarity == "2" %}	
+				{% elif ingredient.rarity == 2 %}	
 					<div id="rarity" style="background-color: #80B5FF">{{ ingredient.difficult }} </div>
-				{% elif ingredient.rarity == "3" %}	
+				{% elif ingredient.rarity == 3 %}	
 					<div id="rarity" style="background-color: #FF8080">{{ ingredient.difficult }} </div>
 				{% else %}	
 					<div id="rarity" style="background-color: #808080">{{ ingredient.difficult }} </div>
